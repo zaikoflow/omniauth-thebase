@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/zaikoflow/omniauth-thebase.png)](https://travis-ci.org/zaikoflow/omniauth-thebase)
 [![Code Climate](https://codeclimate.com/github/zaikoflow/omniauth-thebase/badges/gpa.svg)](https://codeclimate.com/github/zaikoflow/omniauth-thebase)
 [![Test Coverage](https://codeclimate.com/github/zaikoflow/omniauth-thebase/badges/coverage.svg)](https://codeclimate.com/github/zaikoflow/omniauth-thebase)
+[![Dependency Status](https://gemnasium.com/zaikoflow/omniauth-thebase.svg)](https://gemnasium.com/zaikoflow/omniauth-thebase)
 
 Omniauth for [Thebase](https://thebase.com/)
 
