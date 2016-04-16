@@ -39,7 +39,7 @@ describe OmniAuth::Strategies::Thebase do
     end
   end
 
-  context "#raw_info" do
+  describe "#raw_info" do
     let(:access_token) { double('AccessToken', options: {}) }
     let(:response) { double('Response', parsed: { "user" => { "shop_id" => "base" } } ) }
 
@@ -50,6 +50,15 @@ describe OmniAuth::Strategies::Thebase do
     it "returns raw_info" do
       allow(access_token).to receive(:get).with('/1/users/me') { response }
       expect(subject.raw_info).to eq({ "shop_id" => "base" })
+    end
+  end
+
+  describe "#callback_url" do
+    it "returns callback url" do
+      allow(subject).to receive(:full_host) { "http://localhost" }
+      allow(subject).to receive(:script_name) { "/1" }
+
+      expect(subject.callback_url).to eq "http://localhost/1/auth/thebase/callback"
     end
   end
 end
