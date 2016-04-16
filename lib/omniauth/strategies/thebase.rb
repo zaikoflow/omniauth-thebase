@@ -19,7 +19,7 @@ module OmniAuth
         @raw_info ||= access_token.get('/1/users/me').parsed["user"] || {}
       end
 
-      def callback_url #FIXME eliminate a mismatch redirect uri (https://github.com/intridea/omniauth-oauth2/pull/70)
+      def callback_url
         full_host + script_name + callback_path
       end
     end
